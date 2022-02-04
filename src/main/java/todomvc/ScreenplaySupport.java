@@ -26,4 +26,9 @@ public class ScreenplaySupport {
     public List<String> taskList(String tasks) {
         return Splitter.on(",").trimResults().splitToList(tasks);
     }
+
+    @ParameterType(".*")
+    public String taskName(String taskName) {
+        return taskName;
+    }
 }

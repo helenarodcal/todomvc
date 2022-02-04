@@ -21,7 +21,8 @@ public class Create implements Performable {
     @Override
     @Step("{0} creates a new list including: #tasks")
     public <T extends Actor> void performAs(T actor) {
-        tasks.stream().forEach(
+
+        tasks.forEach(
             task -> {
                 actor.attemptsTo(
                         AddATodoItem.called(task)
