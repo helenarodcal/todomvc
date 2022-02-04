@@ -8,6 +8,6 @@ import java.util.List;
 
 public class TheItems {
     public static <T> Question<List<String>> displayed() {
-        return Text.of(TodoList.ITEMS).asListOf(String.class);
+        return actor -> Text.ofEach(TodoList.ITEMS).asListOf(String.class).answeredBy(actor);
     }
 }
